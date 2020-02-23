@@ -1,0 +1,16 @@
+#content {
+  margin-right: 325px;
+}
+
+#content main {
+  border-right-width: 1px;
+}
+
+#autolovex-app {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 8px;
+  background-color: #fff;
+}
