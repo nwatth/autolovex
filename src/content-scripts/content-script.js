@@ -1,6 +1,6 @@
 import './content-style.css'
 
-let tinderBot = (() => {
+let TinderBot = (() => {
   return {
     like: () => {
       let likeSelector = '.recsGamepad .recsGamepad__button[aria-label="Like"]'
@@ -13,11 +13,14 @@ let tinderBot = (() => {
     closeMatchPopup: () => {
       let MatchSelector = '#modal-manager-canvas a[aria-current="page"]'
       document.querySelector(MatchSelector).click()
+    },
+    init: () => {
+      return TinderBot
     }
   }
 })()
 
-let autoSwiper = (() => {
+let AutoSwiper = (() => {
   const appId = 'autolovex-app'
   const delayedTime = 1000
 
@@ -29,21 +32,21 @@ let autoSwiper = (() => {
     registerEvents: () => {
       botPanel.querySelector('.autolovex-action').onclick = (e) => {
         e.preventDefault()
-        autoSwiper.toggle()
+        AutoSwiper.toggle()
       }
     },
     start: () => {
       isRunning = true
-      autoSwiper.run()
+      AutoSwiper.run()
     },
     stop: () => {
       isRunning = false
     },
     toggle: () => {
       if(isRunning) {
-        autoSwiper.stop()
+        AutoSwiper.stop()
       } else {
-        autoSwiper.start()
+        AutoSwiper.start()
       }
     },
     run: () => {
@@ -58,7 +61,7 @@ let autoSwiper = (() => {
           }
         }
 
-        setTimeout(autoSwiper.run, delayedTime)
+        setTimeout(AutoSwiper.run, delayedTime)
       }
     },
     init: (bot) => {
@@ -72,10 +75,13 @@ let autoSwiper = (() => {
       setTimeout(() => {
         botPanel = document.querySelector('#' + appId)
         botPanel.innerHTML = '<a class="autolovex-action">Run!</a>'
-        autoSwiper.registerEvents()
+        AutoSwiper.registerEvents()
       }, delayedTime)
+
+      return AutoSwiper
     }
   }
 })()
 
-autoSwiper.init(tinderBot)
+let tinderBot = TinderBot.init()
+AutoSwiper.init(tinderBot)
