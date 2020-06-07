@@ -8067,10 +8067,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-cli-plugin-browser-extension@0.24.0:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/vue-cli-plugin-browser-extension/-/vue-cli-plugin-browser-extension-0.24.0.tgz#4f8c82b3a5107c292cbd7aeeabc9ff400e342091"
-  integrity sha512-pEawsmfim/lDxrgstArdvIAf45Jnwo6C6GyoxKPe1IEJVlyfDlXb07oU1xDjH0I80ggiW90uYBeVvRjm2B0M9w==
+vue-cli-plugin-browser-extension@0.24.2:
+  version "0.24.2"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-browser-extension/-/vue-cli-plugin-browser-extension-0.24.2.tgz#3b8aca71c7d398169657890ac06018be1c24cc40"
+  integrity sha512-kBweBMd5BeJZgr/1FNZWzO1TjZrbygaevIPSCzEvg97c09PgOLcDhYJFdKTkBP3Ia5w8JFgagmDVoAhGU82TNw==
   dependencies:
     "@vue/cli-shared-utils" "^3.0.0-rc.3"
     copy-webpack-plugin "^4.5.2"
